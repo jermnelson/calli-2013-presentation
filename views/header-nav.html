@@ -1,0 +1,31 @@
+<!-- Header and Nav -->
+<div class="row">
+ <div class="large-3 columns">
+   <h1><a href="/calli-2013-presentation/"><img src="/calli-2013-presentation/assets/img/cal-logo.png" alt="CAL Logo"></a></h1>
+ </div>
+ <div class="large-9 columns">
+  <ul class="button-group right">
+    <li><a href="#" class="button" data-reveal-id="about-presentation">About</a></li>
+    <li>
+     <a href="#" class="button {% if category=='slide' %}secondary{% endif %}" data-dropdown="slide-menu">Slides</a>
+     <ul id="slide-menu" class="f-dropdown" data-dropdown-content>
+     {% for slide in slides %}
+      <li>
+       <a href="/calli-2013-presentation/slides/{{ slide.name }}">
+        {{ slide.label }}</a>
+      </li>
+     {% endfor %}
+     </ul>
+    </li>
+    <li>
+      <a href="#" class="button {% if category=='resources' %}secondary{% endif %}" data-dropdown="resource-menu">Resources</a>
+      <ul id="resource-menu" class="f-dropdown" data-dropdown-content>
+        <li><a href="/calli-2013-presentation/glossary.html">Glossary</a></li>
+        <li><a href="/calli-2013-presentation/sources.html">Sources</a></li>
+      </ul>
+    </li>
+    <li><a href="#" class="button">Contact</a></li>
+  </ul>
+ </div>
+</div>
+<!-- End Header and Nav -->

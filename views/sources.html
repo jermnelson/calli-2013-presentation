@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block subtitle %}- Sources{% endblock %}
+
+{% block body %}
+<div class="row">
+ <div class="large-12">
+  <article class="panel">
+   <h1>Sources</h1>
+   {% for source in sources %}
+   <p><strong>{{ source.headline }}</strong>
+   {% if source.author %}
+   by 
+   {% for author in source.author %}
+     {{ author.name }}
+     {% if not loop.last %},{% endif %}
+   {% endfor %}
+   {% endif %}
+   {% endfor %}
+  </article>
+ </div>
+</div>
+{% endblock %}

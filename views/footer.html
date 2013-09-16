@@ -1,0 +1,29 @@
+  <!-- Footer -->
+
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr />
+      <div class="row">
+        <div class="large-6 columns">
+          <p>&copy; 2013 by Jeremy Nelson under the Creative Commons Attribution 3.0 Unported License.</p>
+        </div>
+        <div class="large-6 columns">
+          <nav class="breadcrumbs">
+           <a href="/calli-2013-presentation/">Home</a>
+           {% for slide in slides %}
+            <a href="/calli-2013-presentation/slides/{{ slide.name }}"
+               {% if current==slide.name %}class="current"{% endif %}>Slide {{ loop.index }}</a>
+           {% endfor %}
+          </nav>
+ 
+{#          <ul class="inline-list right">
+            <li><a href="/calli-2013-presentation/">Home</a></li>
+           {% for slide in slides %}
+            <li><a href="/calli-2013-presentation/slides/{{ slide.name }}">Slide {{ loop.index }}</a></li>
+           {% endfor %}
+          </ul>
+#}
+        </div>
+      </div>
+    </div>
+  </footer>

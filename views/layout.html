@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>CALLI 2013 Presentation {% block subtitle %}{% endblock %}</title>
+
+  <link rel="stylesheet" href= "/calli-2013-presentation/assets/css/normalize.css">
+  <link rel="stylesheet" href="/calli-2013-presentation/assets/css/foundation.min.css">
+  <link rel="stylesheet" href="/calli-2013-presentation/assets/css/default.css">
+  {% block more_css %}{% endblock %}
+
+  <script src="/calli-2013-presentation/assets/js/custom.modernizr.js"></script>
+
+</head>
+<body>
+ {% include 'header-nav.html' %}
+  {% block body %}{% endblock %}
+ {% include 'footer.html' %}
+ {% include 'about-dlg.html' %}
+  <script>
+  document.write('<script src=/calli-2013-presentation/assets/js/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="/calli-2013-presentation/assets/js/foundation.min.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  {% block more_js %}{% endblock %}
+</body>
+</html>

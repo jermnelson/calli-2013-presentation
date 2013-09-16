@@ -1,3 +1,19 @@
 body {
-  background-color: rgb(222,222,222);
+/* background-color: rgb(222,222,222); */
+
+ /* background-color: rgb(246, 225, 185); */
+ background-color: rgb(228, 239, 244);
+ background-image: url(/calli-2013-presentation/assets/img/Colorado_large.png);
+ background-repeat: no-repeat;
+}
+
+.slide-body-blu {
+ background-color: rgb(202, 240, 255);
+ border: 1px solid rgb(0, 157, 220);
+}
+
+.slide-body-grn {
+  background-color: rgb(220, 247, 196);
+  border: 1px solid rgb(122, 293, 66);
+  padding: 1em;
 }

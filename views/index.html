@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<!-- First Band (Image) -->
+<div class="row">
+  <div class="large-12 columns">
+   <h2 class="subheader">CALLI Presentation</h2>
+   <h1>Technology Collaboration in Colorado</h1>
+   <hr>
+ </div>
+</div>
+
+<!-- Second Band (Image Left with Text) -->
+
+<div class="row panel">
+    <div class="large-4 columns">
+      <img src="http://placehold.it/400x300&text=[img]">
+    </div>
+    <div class="large-8 columns">
+      <h4>Purpose of Presentation.</h4>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>This presentation introduces the concept of a library pull platform as a newer, explict model
+             for encouraging technology collaboration among libraries in Colorado.</p>
+          <p></p>
+        </div>
+        <div class="large-6 columns">
+          <p>This presentation comes from research being done on 
+          <a href="http://becomingleanlibrary.com/">Becoming a Lean Library</a>, a book I'm writing for Chandos Printing with a
+          expected publication date in the third quarter of 2014</p> 
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Third Band (Image Right with Text) -->
+
+  <div class="row">
+   {% for slide in slides %}
+    <div class="large-3 columns">
+     <aside class="panel">
+     <h5>{{ slide.label }}</h5>
+     </aside>
+    </div>
+   {% endfor %}
+  </div>
+{% endblock %}
+
