@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  }, 
+  "@type": "Article", 
+  "author": [
+    {
+      "@type": "Person", 
+      "familyName": "Suber", 
+      "givenName": "Peter", 
+      "name": "Peter Suber"
+    }
+  ], 
+  "copyrightYear": 2004, 
+  "headline": "A Very Brief Introduction to Open Access", 
+  "keywords": [
+    "open access", 
+    "journals", 
+    "publishing"
+  ], 
+  "name": "a-very-brief-introduction-to-open-access", 
+  "url": "http://legacy.earlham.edu/~peters/fos/brief.htm"
+}

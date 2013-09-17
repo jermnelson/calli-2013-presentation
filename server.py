@@ -35,7 +35,8 @@ SLIDES = json.load(open(os.path.join(PROJECT_ROOT,
                                      "js",
                                      "slides.json")))
 SOURCES = {}
-for filename in ["power-of-pull"]:
+for filename in ["a-very-brief-introduction-to-open-access",
+                 "power-of-pull"]:
     SOURCES[filename] = json.load(
         open(os.path.join(PROJECT_ROOT,
                           "assets",
