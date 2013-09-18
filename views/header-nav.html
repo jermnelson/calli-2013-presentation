@@ -9,7 +9,7 @@
     <li>
      <a href="#" class="button {% if category=='slide' %}secondary{% endif %}" data-dropdown="slide-menu">Slides</a>
      <ul id="slide-menu" class="f-dropdown" data-dropdown-content>
-     {% for slide in slides %}
+     {% for slide in slides.values() %}
       <li>
        <a href="/calli-2013-presentation/slides/{{ slide.name }}">
         {{ slide.label }}</a>
@@ -24,7 +24,7 @@
         <li><a href="/calli-2013-presentation/sources.html">Sources</a></li>
       </ul>
     </li>
-    <li><a href="#" class="button">Contact</a></li>
+    <li><a href="#" class="button" data-reveal-id="contact">Contact</a></li>
   </ul>
  </div>
 </div>

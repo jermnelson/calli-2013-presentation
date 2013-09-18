@@ -28,14 +28,21 @@ from bottle import abort, request, route, run, static_file
 from bottle import jinja2_view as view
 from bottle import jinja2_template as template
 
+from collections import OrderedDict
+
 FLUP = False
 PROJECT_ROOT = os.path.split(os.path.abspath(__name__))[0]
-SLIDES = json.load(open(os.path.join(PROJECT_ROOT,
-                                     "assets",
-                                     "js",
-                                     "slides.json")))
+SLIDES = OrderedDict()
+for slide in json.load(
+    open(os.path.join(
+        PROJECT_ROOT,
+        "assets",
+        "js",
+        "slides.json"))):
+    SLIDES[slide.get('name')] = slide
 SOURCES = {}
 for filename in ["a-very-brief-introduction-to-open-access",
+                 "futures-thinking-basics",
                  "power-of-pull"]:
     SOURCES[filename] = json.load(
         open(os.path.join(PROJECT_ROOT,
@@ -59,27 +66,33 @@ def send_asset(type_of,filename):
 @route("/calli-2013-presentation/glossary.html")
 def glossary():
     return template("glossary.html",
+                    category='resources',
+                    current=None,
                     slides=SLIDES)
 
 @route("/calli-2013-presentation/slides/<slide:path>")
 def slide(slide):
+    
     return template("{0}.html".format(slide),
                     category='slide',
-                    current=slide,
+                    current=SLIDES.get(slide),
                     slides=SLIDES)
 
 @route("/calli-2013-presentation/sources.html")
-def glossary():
+def sources():
     sorted_sources = []
     for key in sorted(SOURCES.keys()):
         sorted_sources.append(SOURCES[key])
     return template("sources.html",
+                    category='resources',
+                    current=None,
                     sources=sorted_sources,
                     slides=SLIDES)
     
 @route("/calli-2013-presentation/")
 def index():
     return template("index.html",
+                    current=None,
                     slides=SLIDES)
 
 

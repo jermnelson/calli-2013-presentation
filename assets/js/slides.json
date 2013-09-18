@@ -1,18 +1,22 @@
 [
   {
-    "label": "What are Pull Platforms?", 
-    "name": "what-are-pull-platforms"
-  }, 
+    "description": "The future of library technology collaboration in Colorado is similar to how we work together today",
+    "label": "Future of Library Technology Collaboration is What We Expect",
+    "name": "future-status-quo"
+  },
   {
-    "label": "Diversity of Library Patrons", 
-    "name": "diversity-of-library-patrons"
-  }, 
+    "description": "The future of library technology collaboration in Colorado is better than the present day.",
+    "label": "Future of Library Technology Collaboration is Better than We Expect",
+    "name": "future-better"
+  },
   {
-    "label": "People are +1", 
-    "name": "people-are-plus-1"
-  }, 
+    "description": "The future of library technology collaboration in Colorado is worse than our current efforts.",
+    "label": "Future of Library Technology Collaboration is Worse than We Expect",
+    "name": "future-worse"
+  },
   {
-    "label": "Open Collaboration in Colorado Libraries", 
-    "name": "open-collaboration-in-colorado-libraries"
+    "description": "The future of library technology collaboration in Colorado is weirder than we expect",
+    "label": "Future of Library Technology Collaboration is Weirder than We Expect",
+    "name": "future-weirder"
   }
 ]

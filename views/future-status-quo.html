@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{# START First Row #}
+<div class="row">
+ <header class="large-12 columns">
+  <h3>In five years...</h3>
+  <h2>{{ current.label }} (the status quo)</h2>
+ </header>
+{# END First Row #}
+</div>
+
+{# START Row #}
+<div class="row">
+ <article class="large-8 columns">
+  <div class="panel">
+   <p>
+    Public, K-12 media centers, Academic, and Special Libraries particpate 
+    in formal and informal collaborations with similar and different libraries in 
+    a variety of consortiums including <a href="http://prospector.coalliance.org/">Prospector</a>, 
+    <a href="http://www.marmot.org/">Marmot</a>,
+    and <a href="#">CARL</a>. This collaboratives include a shared ILS (Marmot), shared
+    digital repositories (CARL), 
+    shared website hosting (<a href="http://www.plinkit.org/">Plinkit</a>), and a shared union 
+    catalog (Prospector, Marmot). 
+   </p>
+  </div>
+ </article>
+ <div class="large-4 columns">
+  <div class="row">
+   <aside class="large-8 slide-body-blu">
+    <h3>Missing any?</h3>
+   </aside>
+  </div>
+ </div>
+{# END Row #}
+</div>
+{% endblock %}
