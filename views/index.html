@@ -5,7 +5,7 @@
 <div class="row">
   <div class="large-12 columns">
    <h3 class="subheader">Colorado Association of Libraries Leadership Institute</h3>
-   <h1>Library Technology Collaboration for Colorado in the Next Five Years</h1>
+   <h1>Library Technology Collaboration in 2018</h1>
    <hr>
  </div>
 </div>
@@ -32,12 +32,9 @@
              for encouraging technology collaboration among libraries in Colorado.</p>
           <p></p>
         </div> #}
-        <div class="large-6 columns">
-          <p>This presentation comes from research being done on 
-          <a href="http://becomingleanlibrary.com/">Becoming a Lean Library</a>, a book I'm writing for Chandos Printing with a
-          expected publication date in the third quarter of 2014</p> 
-
-        </div>
+        <quote class="large-6 columns">
+        "to illuminate unexpected implications of present-day issues; the emphasis isn't on what will happen, but on what could happen, given various observed drivers. It's a way of getting new perspectives and context for present-day decisions, as well as for dealing with the dilemma at the heart of all strategic thinking: the future can't be predicted, yet we have to make choices based on what is to come.  
+        </quote>
       </div>
     </div>
   </div>
@@ -46,15 +43,24 @@
   <!-- Third Band (Image Right with Text) -->
 
   <div class="row">
-   {% for slide in slides.values() %}
-    <div class="large-3 columns">
-     <aside class="panel">
+   {% for column in slides.values()|slice(2) %}
+    <div class="large-6 columns">
+     {% for slide in column %}
+     <aside class="panel {{ slide.name }} radius">
+      {% if slide.name == 'future-weirder' %}
+      <img src="/calli-2013-presentation/assets/img/tie-dyed.png" style="float: right">
+      {% endif %}
+      {% if slide.name == 'future-better' %}
+      <img src="/calli-2013-presentation/assets/img/sun-sky.png" style="float: left; padding-right: .5em">
+      {% endif %}
+
      <h5>{{ slide.label }}
       <a href="/calli-2013-presentation/slides/{{ slide.name }}">
       <span class="round alert label">Go</span> </a>
      </h5>
      <p>{{ slide.description }}</p>
      </aside>
+     {% endfor %}
     </div>
    {% endfor %}
   </div>

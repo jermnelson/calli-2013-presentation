@@ -1,12 +1,69 @@
 {% extends "layout.html" %}
 
+{% block more_css %}
+<style>
+.future-weirder-blu {
+ background-color: rgb(71, 172, 250);
+ border: 2px dotted rgb(36, 64, 164);
+}
+
+.future-weirder-grn {
+ background-color: rgb(128, 218, 42);
+ border: 2px solid rgb(74, 136, 39);
+}
+
+.future-weirder-ylw {
+ background-color: rgb(232, 246, 47);
+ border: 2px double rgb(255, 106, 48);
+}
+</style>
+{% endblock %}
 {% block body %}
 {# START First Row #}
 <div class="row">
  <header class="large-12 columns">
-  <h3>In five years...</h3>
-  <h2>{{ current.label }}</h2>
+  <div class="row">
+   <div class="large-7 columns">
+    <h3>In five years...</h3>
+    <h2>{{ current.label }}</h2>
+   </div>
+   <div class="large-4 columns">
+    <img src="/calli-2013-presentation/assets/img/tie-dyed.png" style="float:left">
+   </div>
  </header>
 {# END First Row #}
+</div>
+
+{# START Scenario Row #}
+<div class="row">
+ <article class="large-8 columns">
+  <div class="future-weirder">
+   <h5>Starting Scenario</h5>
+   <p>
+    Libraries are the center of new revolution in shareable, open, and aggressively local
+    community centers that focus on cataloging, sharing, and promoting the virtual and physical
+    artifacts created by their communities. Cheap 3D Printing, coupled with ...,
+   </p>
+  </div>
+  <div class="future-weirder-ylw">
+   <h5>Alternates?</h5>
+   <p>
+     
+
+   </p>
+  </div>
+ </article>
+ <aside class="large-4 columns">
+  <div class="future-weirder-grn">
+   <h3>Trends</h3>
+  </div>
+  <hr>
+  <div class="future-weirder-blu">
+   <h3>Technology</h3>
+
+
+  </div>
+ </aside>
+{# END Scenario Row #}
 </div>
 {% endblock %}

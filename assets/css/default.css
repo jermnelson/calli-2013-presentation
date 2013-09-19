@@ -17,3 +17,55 @@ body {
   border: 1px solid rgb(122, 293, 66);
   padding: 1em;
 }
+
+.future-status-quo {
+/*
+  background-color: rgb(202, 202, 255);
+  border: 1px solid rgb(128, 0, 64); */
+}
+
+.future-better {
+  background-color: rgb(118, 103, 255);
+  border: 1px solid rgb(255, 242, 0);
+}
+
+.future-better p {
+  padding-left: .5em;
+}
+
+.future-worse {
+ background-color: rgb(195, 195, 195);
+ border: 3px solid rgb(0, 0, 0);
+ }
+
+/*
+.future-worse h5 {
+  color: rgb(255, 255, 255); 
+}
+
+.future-worse p {
+  color: rgb(255, 255, 255); 
+} */
+
+.future-weirder {
+ background-color: rgb(197, 38, 92);
+ /* background-image: url(/calli-2013-presentation/assets/img/weird-gradient.png);
+ background-position: top right; 
+ background-repeat: repeat-x; */
+
+}
+
+.future-weirder h5 {
+color: rgb(255, 255, 255);
+}
+
+.future-weirder p {
+ color: rgb(255, 255, 255);
+ font-weight: bold;
+ padding: .5em;
+}
+
+
+/* .future-worse h5, p {
+ color: rgb(255, 255, 255) !important; 
+} */

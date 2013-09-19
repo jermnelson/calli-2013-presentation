@@ -1,12 +1,69 @@
 {% extends "layout.html" %}
 
+{% block more_css %}
+<style>
+ .purple {
+   background-color: rgb(245, 90, 155);
+   border: 2px solid rgb(133, 90, 213);
+   padding: .5em;
+ }
+
+ .future-better h3 {
+  color: rgb(255, 234, 219);
+  padding-left: .5em;
+ }
+
+ .future-better p {
+  color: rgb(239, 228, 176);
+ }
+
+ .sunlight {
+  background-color: rgb(239, 228, 176);
+  border: 2px solid rgb(141, 121, 29);
+  padding: .5em;
+ }
+</style>
+{% endblock %}
+
 {% block body %}
 {# START First Row #}
 <div class="row">
- <header class="large-12 columns">
+ <header class="large-12 columns">  
+  <img src="/calli-2013-presentation/assets/img/sun-sky.png"  style="float: left; padding-right: .5em">
   <h3>In five years...</h3>
   <h2>The {{ current.label }}</h2>
  </header>
 {# END First Row #}
+</div>
+
+{# START scenario Row #}
+<div class="row">
+ <aside class="large-4 columns">
+  <div class="purple radius">
+   <h5>Trends</h5> 
+  </div>
+   <hr>
+  <div class="sunlight radius">
+   <h5>Technology</h5>
+
+  </div>
+ </aside>
+ <article class="large-8 columns">
+  <div class="future-better">
+   <h3>Starting Scenario</h3>
+   <p>
+    With the relative economic boom of most counties in Colorado along with the recognition among
+    local communities of the value of public and academic libraries in their communities; technological
+    collaboration among libraries floushes with the adoption of open-source  bibliographic services 
+    running on what they would call a hybrid cloud in 2013.
+   </p>
+   <p>
+    Collaboration among different libraries becomes even more important as the widening economic gap between
+    the upper 20% is greater than the lower 80% of library 
+    privledged libraries with strong local communities
+   </p>
+  </div>
+ </article>
+{# END scenario Row #}
 </div>
 {% endblock %}
