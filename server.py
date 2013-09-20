@@ -101,25 +101,13 @@ def sources():
                     slides=SLIDES)
 
 
-@route("/calli-2013-presentation/")
-def sources():
-    sorted_sources = []
-    for key in sorted(SOURCES.keys()):
-        sorted_sources.append(SOURCES[key])
-    return template("sources.html",
-                    category='resources',
-                    current=None,
-                    sources=sorted_sources,
-                    slides=SLIDES)
+
     
-@route("/calli-2013-presentation/what-are-pull-platforms")
+@route("/calli-2013-presentation/")
 def index():
-    return template("what-are-pull-platforms.html",
+    return template("index.html",
                     current=None,
                     slides=SLIDES)
-
-
-
 
 parser = argparse.ArgumentParser(
     description='Run CALLI 2013 Presentation')
