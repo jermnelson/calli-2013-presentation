@@ -27,6 +27,7 @@ import os
 from bottle import abort, request, route, run, static_file
 from bottle import jinja2_view as view
 from bottle import jinja2_template as template
+from bottle import FlupFCGIServer
 
 from collections import OrderedDict
 
