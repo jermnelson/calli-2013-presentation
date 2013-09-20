@@ -16,7 +16,18 @@
     <div class="large-4 columns">
       {# <img src="http://placehold.it/400x300&text=[img]"> #}
       <img src="/calli-2013-presentation/assets/img/danger-expectations.png">
-
+      <p></p>
+      <quote>
+        <img src="/calli-2013-presentation/assets/img/cascio_jamais_headshot-sm.jpg" style="float:right; width:120px">
+        "to illuminate unexpected implications of present-day issues; the emphasis 
+        isn't on what will happen, but on what could happen, given various observed drivers. 
+        It's a way of getting new perspectives and context for present-day decisions, as well as for 
+        dealing with the dilemma at the heart of all strategic thinking: the future can't be predicted, 
+        yet we have to make choices based on what is to come."
+        <footer>Jamais Cascio, 
+        <a href="http://www.fastcompany.com/1362037/futures-thinking-basics"><em>Futures Thinking: The Basics</em></a>
+        </footer>
+      </quote>
     </div>
     <div class="large-8 columns">
       <h4>Purpose of Presentation.</h4>
@@ -25,22 +36,46 @@
          <p>This presentation explores the question of "What will library technology collaboration in Colorado
             look like in five years?" by using the scenario forecasting model developed by futurist 
             <a href="/calli-2013-presentation/sources.html#future-thinking-basics">
-              Jamais Cascio</a>
+              Jamais Cascio</a>. In his model, we are asked to examine a single question in four scenarios.
+         </p>
         </div>
-        {# <div class="large-6 columns">
-          <p>This presentation introduces the concept of a library pull platform as a newer, explict model
-             for encouraging technology collaboration among libraries in Colorado.</p>
-          <p></p>
-        </div> #}
-        <quote class="large-6 columns">
-        "to illuminate unexpected implications of present-day issues; the emphasis isn't on what will happen, but on what could happen, given various observed drivers. It's a way of getting new perspectives and context for present-day decisions, as well as for dealing with the dilemma at the heart of all strategic thinking: the future can't be predicted, yet we have to make choices based on what is to come.  
-        </quote>
+        <div class="large-6 columns">
+         <p>
+            For each scenario, we will ask what are our expectations in 2018 and what as leaders do we need to 
+            do now to avoid the worst outcomes while striving for the best outcomes.
+            </p>
+          <ul>
+            <li>
+             <a href="/calli-2013-presentation/slides/future-status-quo">The future is what I expect</a>
+            </li>
+            <li>
+             <a href="/calli-2013-presentation/slides/future-better">The future is better than I expect.</a>
+            </li> 
+            <li>
+             <a href="/calli-2013-presentation/slides/future-worse">The future is worse than I expect.</a>
+            </li>
+            <li>
+              <a href="/calli-2013-presentation/slides/future-weirder">  The future is weirder than I expect.</a>
+            </li> 
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 
+  <div class="row">
+    <div class="large-8 columns">
+     <h3>Video Introduction to Presentation</h3>
+     <iframe width="640" height="480" src="//www.youtube.com/embed/2FbknmKDj8w" frameborder="0" allowfullscreen></iframe>
 
-  <!-- Third Band (Image Right with Text) -->
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="large-8 columns">
+   <hr>
+   </div>  
+  </div>
 
   <div class="row">
    {% for column in slides.values()|slice(2) %}
@@ -66,3 +101,5 @@
   </div>
 {% endblock %}
 
+{% block more_dlgs %}
+{% endblock %}

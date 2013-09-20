@@ -42,7 +42,9 @@ for slide in json.load(
     SLIDES[slide.get('name')] = slide
 SOURCES = {}
 for filename in ["a-very-brief-introduction-to-open-access",
+                 "future-of-the-library",
                  "futures-thinking-basics",
+                 "the-library-as-catalyst-for-civic-engagment-reinventing-libraries",
                  "power-of-pull"]:
     SOURCES[filename] = json.load(
         open(os.path.join(PROJECT_ROOT,
@@ -70,6 +72,14 @@ def glossary():
                     current=None,
                     slides=SLIDES)
 
+
+@route("/calli-2013-presentation/redis-library-services-platform")
+def rlsp():
+    return template("rlsp.html",
+                    category='resources',
+                    current=None,
+                    slides=SLIDES)
+
 @route("/calli-2013-presentation/slides/<slide:path>")
 def slide(slide):
     
@@ -88,12 +98,26 @@ def sources():
                     current=None,
                     sources=sorted_sources,
                     slides=SLIDES)
-    
+
+
 @route("/calli-2013-presentation/")
+def sources():
+    sorted_sources = []
+    for key in sorted(SOURCES.keys()):
+        sorted_sources.append(SOURCES[key])
+    return template("sources.html",
+                    category='resources',
+                    current=None,
+                    sources=sorted_sources,
+                    slides=SLIDES)
+    
+@route("/calli-2013-presentation/what-are-pull-platforms")
 def index():
-    return template("index.html",
+    return template("what-are-pull-platforms.html",
                     current=None,
                     slides=SLIDES)
+
+
 
 
 parser = argparse.ArgumentParser(

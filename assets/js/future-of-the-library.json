@@ -1,0 +1,19 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/"
+  }, 
+  "@type": "BlogPosting", 
+  "author": [
+    {
+      "@type": "Person", 
+      "familyName": "Godin", 
+      "givenName": "Seth", 
+      "name": "Seth Godin"
+    }
+  ], 
+  "copyrightYear": 2011, 
+  "datePublished": "2011-05-16", 
+  "headline": "The future of the library: What is a public library for?", 
+  "name": "future-of-the-library", 
+  "url": "http://sethgodin.typepad.com/seths_blog/2011/05/the-future-of-the-library.html"
+}
