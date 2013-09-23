@@ -43,6 +43,7 @@ for slide in json.load(
     SLIDES[slide.get('name')] = slide
 SOURCES = {}
 for filename in ["a-very-brief-introduction-to-open-access",
+                 "building-a-library-app-portfolio-with-redis-and-django",
                  "future-of-the-library",
                  "futures-thinking-basics",
                  "the-library-as-catalyst-for-civic-engagment-reinventing-libraries",
