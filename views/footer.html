@@ -15,15 +15,18 @@
                {% if current.name==slide.name %}class="current"{% endif %}>Slide {{ loop.index }}</a>
            {% endfor %}
           </nav>
- 
-{#          <ul class="inline-list right">
-            <li><a href="/calli-2013-presentation/">Home</a></li>
-           {% for slide in slides %}
-            <li><a href="/calli-2013-presentation/slides/{{ slide.name }}">Slide {{ loop.index }}</a></li>
-           {% endfor %}
-          </ul>
-#}
-        </div>
+       </div>
+      </div> {# END Inside Row #}
+      <div class="row">
+       <div class="large-12" style="font-size: .75em">
+        <p>
+        Presentation source code and content repository available at 
+        <a href="https://github.com/jermnelson/calli-2013-presentation">
+        https://github.com/jermnelson/calli-2013-presentation
+        </a>
+       </p>
+        <hr>
+       </div>
       </div>
     </div>
   </footer>

@@ -66,6 +66,13 @@ def send_asset(type_of,filename):
                                              type_of))
     
 
+@route("/calli-2013-presentation/html5-apps")
+def html5_apps():
+    return template("html5-apps.html",
+                    category="resources",
+                    current=None,
+                    slides=SLIDES)
+
 @route("/calli-2013-presentation/glossary.html")
 def glossary():
     return template("glossary.html",
